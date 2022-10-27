@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.android.Home"
+        android:label="HOME"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home2_to_detail"
+            app:destination="@id/detail"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_home_to_api"
+            app:destination="@id/api" />
+        <action
+            android:id="@+id/action_home_to_login2"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail"
+        android:name="com.example.android.Detail"
+        android:label="DETAIL"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detail_to_home2"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.android.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/api"
+        android:name="com.example.android.Api"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" />
+</navigation>
